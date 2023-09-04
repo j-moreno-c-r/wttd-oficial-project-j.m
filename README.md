@@ -17,7 +17,7 @@ git clone clone https://github.com/j-moreno-c-r/wttd-deploy-linux
 cd wttd
 python -m venv .wttd
 source .wttd/bin/acctivate
-pip install -r requirements.txt
+pip install -r requirements-dev.txt
 cp contrib/env-sample .env
 python manage.py test 
 ``
