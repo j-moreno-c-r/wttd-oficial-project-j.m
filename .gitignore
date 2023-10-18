@@ -1,6 +1,7 @@
 .env
 .idea
 .wttd
+.venv2
 *.sqlite3
 *pyc
 __pycace__

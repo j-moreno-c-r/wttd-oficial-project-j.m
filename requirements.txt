@@ -7,6 +7,6 @@ sqlparse==0.4.4
 static3==0.7.0
 typing_extensions==4.6.1
 gunicorn==20.0.4
-psycopg2-binary==2.8.6
+psycopg2-binary==2.9.6
 django-extensions==3.2.3
 django-test-without-migrations==0.6
