@@ -1,0 +1,24 @@
+[
+{
+    "model": "core.speaker",
+    "pk": 1,
+    "fields": {
+        "name": "Grace Hopper",
+        "slug": "grace-hopper",
+        "photo": "https://www.timeforkids.com/wp-content/uploads/2020/08/Grace_003.jpg",
+        "website": "http://hbn.link/hopper-site",
+        "description": "Programadora e almirante.\r\nInventora do compilador, criadora da linguagem de programação Flow-Matic serviu de base para a linguagem COBOL permitindo a popularização das aplicações comerciais.\r\nQuer mais o que?"
+    }
+},
+{
+    "model": "core.speaker",
+    "pk": 2,
+    "fields": {
+        "name": "Alan Turing",
+        "slug": "alan-turing",
+        "photo": "https://cdn.britannica.com/81/191581-050-8C0A8CD3/Alan-Turing.jpg",
+        "website": "http://hbn.link/turing-site",
+        "description": "Matemático e decifrador de códigos:\r\nInventou o computador moderno, formalizou matematicamente o que é um algoritmo e de quebra salvou o mundo como conhecemos ao destroçar a criptografia nazista."
+    }
+}
+]
