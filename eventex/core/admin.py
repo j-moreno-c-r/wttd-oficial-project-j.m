@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.utils.html import format_html
 
-from eventex.core.models import Speaker, Contact
+from eventex.core.models import Speaker, Contact, Talk
 
 
 class ContactInLine(admin.TabularInline):
@@ -24,3 +24,4 @@ class SpeakerModelAdmin(admin.ModelAdmin):
     photo_img.short_description = "foto"
 
 admin.site.register(Speaker, SpeakerModelAdmin)
+admin.site.register(Talk)
