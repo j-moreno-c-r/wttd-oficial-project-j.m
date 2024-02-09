@@ -8,6 +8,7 @@ class SubscriptionFGormTest(TestCase):
         form = SubscriptionForm()
         expected = ['name', 'cpf', 'email', 'phone']
         self.assertSequenceEqual(expected, list(form.fields))
+
     def test_cpf_is_digit(self):
         """CPF must only accept digits. """
         form = self.make_validated_form(cpf='aBcd5678901')
@@ -17,23 +18,24 @@ class SubscriptionFGormTest(TestCase):
         """CPF must have 11 digits. """
         form = self.make_validated_form(cpf='1234')
         self.assertFormErrorCode(form, 'cpf', 'lenght')
+
     def assertFormErrorCode(self, form, field, code):
         errors = form.errors.as_data()
         errors_list = errors[field]
         exception = errors_list[0]
         self.assertEqual(code, exception.code)
 
-
-
     def test_name_must_be_capitalized(self):
         """Name must be capitalized. """
-        #JOAO moreno -> Joao Moreno.
+        # JOAO moreno -> Joao Moreno.
         form = self.make_validated_form(name='JOAO moreno')
         self.assertEqual('Joao Moreno', form.cleaned_data['name'])
+
     def test_email_is_optional(self):
         """Email is optional"""
         form = self.make_validated_form(email='')
         self.assertFalse(form.errors)
+
     def test_phone_is_optional(self):
         """Phone is optional"""
         form = self.make_validated_form(phone='')

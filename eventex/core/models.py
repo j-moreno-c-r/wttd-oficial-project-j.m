@@ -26,7 +26,7 @@ class Contact(models.Model):
     PHONE = 'P'
 
     KINDS = (
-        (EMAIL, ('Email')),
+        (EMAIL, 'Email'),
         (PHONE, 'Telefone'),
 
     )

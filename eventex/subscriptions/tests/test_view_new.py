@@ -28,6 +28,7 @@ class SubscriptionsNewGet(TestCase):
         for text, count in tags:
             with self.subTest():
                 self.assertContains(self.resp, text, count)
+
     def test_csrf(self):
         """Html must contain csrf"""
         self.assertContains(self.resp, 'csrfmiddlewaretoken')
@@ -47,12 +48,12 @@ class SubscriptionsNewPostValid(TestCase):
     def test_post(self):
         """Valid POST should redirect to /inscricao/1/"""
         self.assertRedirects(self.resp, r('subscriptions:detail', 1))
+
     def test_send_subscribe_email(self):
         self.assertEqual(1, len(mail.outbox))
 
     def test_save_subscription(self):
         self.assertTrue(Subscription.objects.exists())
-
 
 
 class SubscriptionsNewPostInvalid(TestCase):
@@ -76,6 +77,7 @@ class SubscriptionsNewPostInvalid(TestCase):
 
     def test_dont_save_subscription(self):
         self.assertFalse(Subscription.objects.exists())
+
 
 class TemplateRegressionTest(TestCase):
     def test_template_has_field_errors(self):

@@ -37,6 +37,7 @@ class SpeakerDetailGet(TestCase):
         speaker = self.resp.context['speaker']
         self.assertIsInstance(speaker, Speaker)
 
+
 class SpeakerDetailNotFound(TestCase):
     def test_not_found(self):
         response = self.client.get(r('speaker_detail', slug='not-found'))
